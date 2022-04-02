@@ -1,0 +1,30 @@
+
+# profile active
+spring:
+  profiles:
+    active: test
+    #    include: db-h2
+    include: db-h2
+---
+
+# test profile
+spring:
+  profiles: test
+  config:
+    use-legacy-processing: true
+
+---
+
+server:
+  error:
+    whitelabel:
+      enabled: false
+
+web:
+  address: "http://localhost:8080"
+
+---
+
+logging:
+  level:
+    root: info
